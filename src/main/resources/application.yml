@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: rabbitmqserver
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+
+rabbitmq:
+  exchange: eapi_exchange
+  queue: eapi
+  routingkey: eapi_routing
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, env
